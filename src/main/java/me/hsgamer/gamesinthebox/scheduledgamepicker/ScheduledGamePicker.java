@@ -1,8 +1,8 @@
-package me.hsgamer.gamesinthebox.exampleexpansion;
+package me.hsgamer.gamesinthebox.scheduledgamepicker;
 
-import me.hsgamer.hscore.expansion.common.Expansion;
+import me.hsgamer.gamesinthebox.expansion.GameExpansion;
 
-public class ExampleExpansion implements Expansion {
+public class ScheduledGamePicker implements GameExpansion {
     @Override
     public boolean onLoad() {
         return true;
