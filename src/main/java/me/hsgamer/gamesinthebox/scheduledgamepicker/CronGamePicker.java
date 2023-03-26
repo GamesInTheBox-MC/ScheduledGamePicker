@@ -8,6 +8,7 @@ import me.hsgamer.gamesinthebox.planner.feature.PlannerConfigFeature;
 import me.hsgamer.gamesinthebox.util.TimeUtil;
 import me.hsgamer.hscore.common.CollectionUtils;
 import me.hsgamer.hscore.crontime.CronTimeManager;
+import org.jetbrains.annotations.NotNull;
 
 import java.time.Instant;
 import java.time.ZoneId;
@@ -36,7 +37,7 @@ public class CronGamePicker implements GamePicker {
     }
 
     @Override
-    public void setup(Map<String, GameArena> arenaMap) {
+    public void setup(@NotNull Map<String, GameArena> arenaMap) {
         rawCronTimeMap.forEach((cronTimeManager, name) -> {
             if (arenaMap.containsKey(name)) {
                 cronTimeMap.put(cronTimeManager, arenaMap.get(name));
