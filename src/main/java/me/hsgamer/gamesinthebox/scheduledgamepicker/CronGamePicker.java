@@ -11,8 +11,6 @@ import me.hsgamer.hscore.crontime.CronTimeManager;
 import org.jetbrains.annotations.NotNull;
 
 import java.time.Instant;
-import java.time.ZoneId;
-import java.time.ZonedDateTime;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -59,7 +57,7 @@ public class CronGamePicker implements GamePicker {
             long shortestTime = Long.MAX_VALUE;
             GameArena shortestArena = null;
             for (Map.Entry<CronTimeManager, GameArena> entry : cronTimeMap.entrySet()) {
-                long time = entry.getKey().getNextEpochMillis(ZonedDateTime.ofInstant(Instant.ofEpochMilli(currentTime), ZoneId.systemDefault()));
+                long time = entry.getKey().getNextEpochMillis(Instant.ofEpochMilli(currentTime));
                 long duration = time - currentTime;
                 if (duration > 0 && time < shortestTime) {
                     shortestTime = time;
