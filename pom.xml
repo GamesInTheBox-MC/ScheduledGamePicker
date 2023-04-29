@@ -26,6 +26,12 @@
             <groupId>me.hsgamer</groupId>
             <artifactId>hscore-crontime</artifactId>
             <version>4.3.0</version>
+            <exclusions>
+                <exclusion>
+                    <groupId>me.hsgamer</groupId>
+                    <artifactId>hscore-logger-provider</artifactId>
+                </exclusion>
+            </exclusions>
         </dependency>
     </dependencies>
 </project>
