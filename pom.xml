@@ -13,6 +13,7 @@
 
     <properties>
         <project.mainClass>me.hsgamer.gamesinthebox.scheduledgamepicker.ScheduledGamePicker</project.mainClass>
+        <shade.attachedArtifact>true</shade.attachedArtifact>
     </properties>
 
     <repositories>
