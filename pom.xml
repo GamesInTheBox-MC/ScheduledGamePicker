@@ -15,20 +15,6 @@
         <project.mainClass>me.hsgamer.gamesinthebox.scheduledgamepicker.ScheduledGamePicker</project.mainClass>
     </properties>
 
-    <dependencies>
-        <dependency>
-            <groupId>me.hsgamer</groupId>
-            <artifactId>hscore-crontime</artifactId>
-            <version>4.3.0</version>
-            <exclusions>
-                <exclusion>
-                    <groupId>me.hsgamer</groupId>
-                    <artifactId>hscore-logger-provider</artifactId>
-                </exclusion>
-            </exclusions>
-        </dependency>
-    </dependencies>
-
     <repositories>
         <repository>
             <id>jitpack.io</id>
@@ -46,6 +32,17 @@
             <artifactId>GamesInTheBox</artifactId>
             <version>master-SNAPSHOT</version>
             <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>me.hsgamer</groupId>
+            <artifactId>hscore-crontime</artifactId>
+            <version>4.3.0</version>
+            <exclusions>
+                <exclusion>
+                    <groupId>me.hsgamer</groupId>
+                    <artifactId>hscore-logger-provider</artifactId>
+                </exclusion>
+            </exclusions>
         </dependency>
     </dependencies>
 </project>
