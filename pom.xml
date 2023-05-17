@@ -4,12 +4,6 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <parent>
-        <groupId>me.hsgamer.gamesinthebox</groupId>
-        <artifactId>expansion-parent</artifactId>
-        <version>1.0.0-SNAPSHOT</version>
-    </parent>
-
     <artifactId>scheduled-game-picker</artifactId>
     <version>1.0.0-SNAPSHOT</version>
     <packaging>jar</packaging>
@@ -32,6 +26,26 @@
                     <artifactId>hscore-logger-provider</artifactId>
                 </exclusion>
             </exclusions>
+        </dependency>
+    </dependencies>
+
+    <repositories>
+        <repository>
+            <id>jitpack.io</id>
+            <url>https://jitpack.io</url>
+        </repository>
+    </repositories>
+    <parent>
+        <groupId>com.github.GamesInTheBox-MC</groupId>
+        <artifactId>ExpansionParent</artifactId>
+        <version>master-SNAPSHOT</version>
+    </parent>
+    <dependencies>
+        <dependency>
+            <groupId>com.github.GamesInTheBox-MC</groupId>
+            <artifactId>GamesInTheBox</artifactId>
+            <version>master-SNAPSHOT</version>
+            <scope>provided</scope>
         </dependency>
     </dependencies>
 </project>
