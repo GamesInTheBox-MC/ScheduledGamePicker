@@ -25,19 +25,19 @@
     <parent>
         <groupId>com.github.GamesInTheBox-MC</groupId>
         <artifactId>ExpansionParent</artifactId>
-        <version>master-SNAPSHOT</version>
+        <version>1.0.1</version>
     </parent>
     <dependencies>
         <dependency>
             <groupId>com.github.GamesInTheBox-MC</groupId>
             <artifactId>GamesInTheBox</artifactId>
-            <version>master-SNAPSHOT</version>
+            <version>1.2.0</version>
             <scope>provided</scope>
         </dependency>
         <dependency>
             <groupId>me.hsgamer</groupId>
             <artifactId>hscore-crontime</artifactId>
-            <version>4.3.0</version>
+            <version>4.3.10</version>
             <exclusions>
                 <exclusion>
                     <groupId>me.hsgamer</groupId>
