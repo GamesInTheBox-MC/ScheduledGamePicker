@@ -6,6 +6,7 @@ import me.hsgamer.gamesinthebox.picker.GamePicker;
 import me.hsgamer.gamesinthebox.planner.Planner;
 import me.hsgamer.gamesinthebox.planner.feature.PlannerConfigFeature;
 import me.hsgamer.gamesinthebox.util.TimeUtil;
+import me.hsgamer.hscore.bukkit.utils.ColorUtils;
 import me.hsgamer.hscore.common.CollectionUtils;
 import me.hsgamer.hscore.crontime.CronTimeManager;
 import org.jetbrains.annotations.NotNull;
@@ -84,6 +85,13 @@ public class CronGamePicker implements GamePicker {
     public String replace(String input) {
         if (input.equalsIgnoreCase("time_left")) {
             return TimeUtil.formatStandardTime(Math.max(0, nextPickTime - System.currentTimeMillis()));
+        }
+        if (input.equalsIgnoreCase("next_game_name")) {
+            if (isPicked || pickedArena == null) {
+                return "";
+            } else {
+                return ColorUtils.colorize(pickedArena.getGame().getDisplayName());
+            }
         }
         return null;
     }
